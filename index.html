@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- =====================
+       HEAD (meta + título + CSS)
+       ===================== -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>RPHONE • Inicio</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- =====================
+       NAVBAR (header fijo)
+       - Menú estilo "imagen 2"
+       - El botón activo se controla con la clase: .pill.active
+       ===================== -->
+  <header class="navbar nav-v2">
+    <div class="container inner">
+      <a class="brand" href="./index.html" aria-label="RPHONE">
+        <img class="logo" src="./assets/rphone-logo.png" alt="RPHONE logo">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a class="pill active" data-nav href="./index.html">Inicio</a>
+        <a class="pill" data-nav href="./catalog.html">Catálogo</a>
+        <a class="pill" href="./servicios.html">Servicios</a>
+        <a class="pill" href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================
+         HERO (FULL SCREEN) + CARRUSEL
+         ===================== -->
+    <section class="hero-carousel hero-full hero-v2" id="heroCarousel" aria-label="Carrusel principal" data-autoplay="true" data-delay="5000">
+      <div class="hero-slides">
+        <article class="hero-slide is-active"
+          data-title="Tu taller de confianza"
+          data-subtitle="Reparación rápida • Garantía • Atención por WhatsApp"
+        >
+          <img src="./assets/presets/branch-2.jpg" alt="RPHONE - Taller">
+        </article>
+
+        <article class="hero-slide"
+          data-title="Pantallas y baterías"
+          data-subtitle="Instalación profesional y pruebas al entregar"
+        >
+          <img src="./assets/presets/us3.jpg" alt="Servicios RPHONE">
+        </article>
+
+        <article class="hero-slide"
+          data-title="Diagnóstico y reparación"
+          data-subtitle="Centro de carga • Mojado • Fallas comunes"
+        >
+          <img src="./assets/presets/us4.jpg" alt="Reparación RPHONE">
+        </article>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title" id="heroTitle">Tu taller de confianza</h1>
+          <p class="hero-subtitle" id="heroSubtitle">Reparación rápida • Garantía • Atención por WhatsApp</p>
+
+          <!-- en hero-v2 se oculta por CSS -->
+          <div class="hero-actions">
+            <a class="pill primary" href="./catalog.html">Ver catálogo</a>
+            <a class="pill" id="waHero" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          </div>
+
+          <div class="hero-scroll-hint">
+            <span class="dot"></span>
+            Desliza / baja para ver más
+          </div>
+        </div>
+      </div>
+
+      <button class="hero-arrow prev" type="button" aria-label="Anterior">‹</button>
+      <button class="hero-arrow next" type="button" aria-label="Siguiente">›</button>
+      <div class="hero-dots" aria-label="Indicadores del carrusel"></div>
+    </section>
+
+    <!-- =====================
+         PROMOCIONES
+         ===================== -->
+    <section class="section promos-section" id="promos" aria-label="Promociones">
+  <div class="container">
+    <h2 class="big-title reveal d-0">Conoce nuestras promociones</h2>
+
+    <a class="promo-main reveal d-80" href="./catalog.html" aria-label="Ver promociones en catálogo">
+  <img src="./assets/presets/promo-main.jpg" alt="Promoción principal">
+</a>
+
+      <div class="promo-mini-row">
+        <a class="promo-mini reveal d-140" href="./catalog.html" aria-label="Promoción 1">
+          <img src="./assets/presets/promo-1.jpg" alt="Promoción 1">
+        </a>
+
+        <a class="promo-mini reveal d-220" href="./catalog.html" aria-label="Promoción 2">
+          <img src="./assets/presets/promo-2.jpg" alt="Promoción 2">
+        </a>
+
+        <a class="promo-mini reveal d-300" href="./catalog.html" aria-label="Promoción 3">
+          <img src="./assets/presets/promo-3.jpg" alt="Promoción 3">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- =====================
+         SERVICIOS (V2)
+         ===================== -->
+    <section class="section services-v2" id="services" aria-label="Servicios">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="big-title reveal d-0">Nuestros servicios</h2>
+            <p class="muted reveal d-80">Click para ver más información</p>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <a class="service-card reveal d-120" href="./servicios.html#svc-pantalla" data-wa="Pantallas" aria-label="Servicio: Pantallas">
+            <img src="./assets/presets/service-1.jpg" alt="Pantallas">
+            <div class="service-overlay"></div>
+            <div class="service-label">Pantallas</div>
+          </a>
+
+          <a class="service-card reveal d-200" href="./servicios.html#svc-bateria" data-wa="Baterías" aria-label="Servicio: Baterías">
+            <img src="./assets/presets/service-2.jpg" alt="Baterías">
+            <div class="service-overlay"></div>
+            <div class="service-label">Baterías</div>
+          </a>
+
+          <a class="service-card reveal d-280" href="./servicios.html#svc-centro-carga" data-wa="Centros de carga" aria-label="Servicio: Centros de carga">
+            <img src="./assets/presets/service-3.jpg" alt="Centros de carga">
+            <div class="service-overlay"></div>
+            <div class="service-label">Centros de<br>carga</div>
+          </a>
+
+          <a class="service-card reveal d-360" href="./servicios.html#s4" aria-label="Ver más servicios">
+            <img src="./assets/presets/service-4.jpg" alt="Más servicios">
+            <div class="service-overlay"></div>
+            <div class="service-label">Más<br>servicios</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================
+         SOBRE (LAYOUT TIPO “ARTISAN PROFILE”)
+         ===================== -->
+   <section class="section about-showcase" id="about" aria-label="Sobre RPHONE">
+  <div class="container">
+    <div class="about-grid-layout">
+      
+      <div class="mosaic-gallery">
+        <figure class="tile vertical-long">
+          <img src="assets/presets/branch-2.jpg" alt="Reparación RPHONE">
+        </figure>
+        <figure class="tile center-offset">
+          <img src="./assets/presets/us2.jpg" alt="Taller">
+        </figure>
+        <figure class="tile bottom-left">
+          <img src="./assets/presets/us4.jpg" alt="Herramientas">
+        </figure>
+        <figure class="tile bottom-right">
+          <img src="./assets/presets/us3.jpg" alt="Sucursal">
+        </figure>
+      </div>
+
+      <div class="about-info">
+        <h2 class="about-main-title">RPHONE</h2>
+        <p class="about-description">
+          Rphone nació en Reynosa, Tamaulipas, el 27 de marzo de 2018. Comenzó especializándose en programación y activación de RSIM para iPhone, y con el tiempo fue ampliando sus conocimientos hasta consolidarse en liberación, diagnóstico y reparación avanzada de dispositivos electrónicos. Gracias a la capacitación constante, la microsoldadura y el uso de herramientas especializadas, la empresa ha logrado realizar reparaciones complejas con altos estándares de calidad. 
+        </p>
+        <div class="about-tags">
+          <span class="tag-pill">Diagnóstico transparente</span>
+          <span class="tag-pill">Garantía por servicio</span>
+          <span class="tag-pill">Atención rápida</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     SOBRE (SECCIÓN 2) — MISMO COLLAGE PERO INVERTIDO
+     - Quitamos el bloque "grande" y duplicamos el layout de arriba, solo invertido
+     ===================== -->
+<section class="section about-showcase" id="about-commitment" aria-label="Nuestro Compromiso">
+  <div class="container">
+    <div class="about-grid-layout about-grid-reverse">
+
+      <div class="about-info">
+        <h2 class="about-main-title">Nuestro Compromiso</h2>
+        <p class="about-description">
+          Actualmente, Rphone se ha consolidado como una empresa confiable en el sector tecnológico, con más de 25,000 dispositivos reparados y miles de clientes satisfechos. Su crecimiento permitió la apertura de una segunda sucursal el 20 de octubre de 2023, contando hoy con presencia en Aztlán y Puerta del Sol. En ambas sucursales se ofrece atención profesional, diagnósticos confiables y soluciones efectivas, siempre con un equipo técnico en constante actualización.
+        </p>
+        <div class="about-tags">
+          <span class="tag-pill">Calidad Artesanal</span>
+          <span class="tag-pill">Refacciones Confiables</span>
+          <span class="tag-pill">Pasión por el detalle</span>
+        </div>
+      </div>
+
+      <div class="mosaic-gallery">
+        <figure class="tile vertical-long">
+          <img src="./assets/presets/us5.jpg" alt="Detalle reparación">
+        </figure>
+        <figure class="tile center-offset">
+          <img src="./assets/presets/us6.jpg" alt="Técnico">
+        </figure>
+        <figure class="tile bottom-left">
+          <img src="./assets/presets/us7.jpg" alt="Herramientas">
+        </figure>
+        <figure class="tile bottom-right">
+          <img src="./assets/presets/us9.jpg" alt="Sucursal">
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     CONOCE MÁS DE NOSOTROS (VIDEOS)
+     ===================== -->
+<section class="section social-videos" id="social-videos" aria-label="Conoce más de nosotros">
+  <div class="container">
+    <div class="social-videos-head">
+      <h2 class="social-videos-title">Conoce más de nosotros</h2>
+      <p class="social-videos-sub">Mira lo último de TikTok y nuestros Reels de Facebook.</p>
+    </div>
+
+    <div class="social-videos-grid">
+      <!-- 1 -->
+      <article class="sv-card sv-card--tiktok sv-card--tiktok-latest">
+        <div class="sv-badge sv-badge--tiktok" aria-label="TikTok">
+          <span class="sv-icon" aria-hidden="true">
+            <!-- TikTok (icono simple) -->
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 3v10.2a4.6 4.6 0 1 1-2-3.8V6.1c1.6 1.7 3.6 2.7 6 2.9V6.8c-2.3-.3-3.8-1.6-4-3.8H14Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sv-label">TikTok • Último</span>
+        </div>
+        <div class="sv-embed sv-embed--crop">
+          <!--
+            ✅ Último TikTok (auto):
+            - Cargamos un fallback (por si falla la detección)
+            - Se carga desde Firestore (documento site/social) para que lo puedas actualizar sin tocar el HTML
+          -->
+          <iframe
+            id="embed-1"
+            src="about:blank"
+            title="Último TikTok"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <a class="sv-open" id="open-1" href="https://www.tiktok.com/@rphone.oficial/video/7620616369649880327?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="Abrir en TikTok">↗</a>
+
+          <!-- Fallback por si TikTok bloquea el embed en tu hosting/navegador -->
+          <a class="sv-fallback" id="fallback-1" href="https://www.tiktok.com/@rphone.oficial/video/7620616369649880327?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">
+            Ver en TikTok
+          </a>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="sv-card sv-card--facebook">
+        <div class="sv-badge sv-badge--facebook" aria-label="Facebook">
+          <span class="sv-icon" aria-hidden="true">
+            <!-- Facebook (icono simple) -->
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sv-label">Facebook Reel</span>
+        </div>
+        <div class="sv-embed sv-embed--crop">
+          <iframe id="embed-2"
+            src="about:blank"
+            title="Facebook Reel"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <a class="sv-open" id="open-2" href="https://www.facebook.com/reel/25927604863555252/" target="_blank" rel="noopener" aria-label="Abrir en Facebook">↗</a>
+          <a class="sv-fallback" id="fallback-2" href="https://www.facebook.com/reel/25927604863555252/" target="_blank" rel="noopener">
+            Ver Reel en Facebook
+          </a>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="sv-card sv-card--facebook sv-card--facebook-alt">
+        <div class="sv-badge sv-badge--facebook" aria-label="Facebook">
+          <span class="sv-icon" aria-hidden="true">
+            <!-- Facebook (icono simple) -->
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sv-label">Facebook Reel</span>
+        </div>
+        <div class="sv-embed sv-embed--crop">
+          <iframe id="embed-3"
+            src="about:blank"
+            title="Facebook Reel"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <a class="sv-open" id="open-3" href="https://www.facebook.com/reel/1392710922435987" target="_blank" rel="noopener" aria-label="Abrir en Facebook">↗</a>
+          <a class="sv-fallback" id="fallback-3" href="https://www.facebook.com/reel/1392710922435987" target="_blank" rel="noopener">
+            Ver Reel en Facebook
+          </a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="sv-card sv-card--tiktok">
+        <div class="sv-badge sv-badge--tiktok" aria-label="TikTok">
+          <span class="sv-icon" aria-hidden="true">
+            <!-- TikTok (icono simple) -->
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 3v10.2a4.6 4.6 0 1 1-2-3.8V6.1c1.6 1.7 3.6 2.7 6 2.9V6.8c-2.3-.3-3.8-1.6-4-3.8H14Z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="sv-label">TikTok</span>
+        </div>
+        <div class="sv-embed sv-embed--crop">
+          <iframe id="embed-4"
+            src="about:blank"
+            title="TikTok"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
+          <a class="sv-open" id="open-4" href="https://www.tiktok.com/@rphone.oficial/video/7596086495660772628" target="_blank" rel="noopener" aria-label="Abrir en TikTok">↗</a>
+          <a class="sv-fallback" id="fallback-4" href="https://www.tiktok.com/@rphone.oficial/video/7596086495660772628" target="_blank" rel="noopener">
+            Ver en TikTok
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- =====================
+         SUCURSALES
+         ===================== -->
+    <section class="section" id="branches" aria-label="Sucursales">
+      <div class="container">
+        <h2 class="big-title center reveal d-0">Contamos con 2 sucursales.</h2>
+
+        <div class="branches-grid">
+          <article class="branch-card reveal d-120">
+            <div class="branch-media">
+              <a id="branchLink1" href="https://maps.app.goo.gl/YtkrNhGLRqy1RgKeA" target="_blank" rel="noopener" aria-label="Abrir ubicación de Puerta del Sol en Google Maps">
+                <img src="./assets/presets/branch-1.jpg" alt="Sucursal Puerta del Sol">
+              </a>
+            </div>
+            <div class="branch-body">
+              <div class="branch-address">Puerta del Sol • Blvd. Puerta del Sol, Reynosa, Tamps.</div>
+              <div class="branch-actions">
+                <a class="pill" id="maps1" href="https://maps.app.goo.gl/YtkrNhGLRqy1RgKeA" target="_blank" rel="noopener">Google Maps <span aria-hidden="true">📍</span></a>
+                <a class="pill" id="wa1" href="https://wa.me/528991198900" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">🟢</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="branch-card reveal d-220">
+            <div class="branch-media">
+              <a id="branchLink2" href="https://maps.app.goo.gl/ztcjKQDMuoxxdpHx6" target="_blank" rel="noopener" aria-label="Abrir ubicación de Matriz Aztlán en Google Maps">
+                <img src="./assets/presets/branch-2.jpg" alt="Sucursal Matriz Aztlán">
+              </a>
+            </div>
+            <div class="branch-body">
+              <div class="branch-address">Matriz • Suc. Aztlán, Reynosa, Tamps.</div>
+              <div class="branch-actions">
+                <a class="pill" id="maps2" href="https://maps.app.goo.gl/ztcjKQDMuoxxdpHx6" target="_blank" rel="noopener">Google Maps <span aria-hidden="true">📍</span></a>
+                <a class="pill" id="wa2" href="https://wa.me/528999828383" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">🟢</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+           <!-- =====================
+         CONTACTO
+         Estilo tipo referencia:
+         icono arriba + título + datos + redes abajo
+         ===================== -->
+    <section class="contact-hero" id="contact" aria-label="Contacto">
+      <img class="contact-bg" src="./assets/presets/branch-2.jpg" alt="RPHONE">
+      <div class="contact-overlay"></div>
+
+      <div class="container">
+        <div class="contact-panel">
+          <h2 class="contact-title reveal d-0">Contáctanos</h2>
+
+          <div class="contact-grid reveal d-80" aria-label="Información de contacto">
+            <!-- TELÉFONO -->
+            <div class="contact-item">
+              <div class="contact-ico" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="60"
+                  height="60"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.33 1.7.62 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.14a2 2 0 0 1 2.11-.45c.8.29 1.64.5 2.5.62A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+
+              <div class="contact-subtitle">Telefono</div>
+
+              <div class="contact-txt">
+                <div class="contact-line">+52 899 982 8383</div>
+                <div class="contact-line">+52 899 119 8900</div>
+              </div>
+            </div>
+
+            <!-- SUCURSALES -->
+            <div class="contact-item">
+              <div class="contact-ico" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="60"
+                  height="60"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+
+              <div class="contact-subtitle">Sucursales</div>
+
+              <div class="contact-txt">
+                <div class="contact-line">Suc. Matriz Aztlán</div>
+                <div class="contact-line">Suc. Puerta del Sol</div>
+              </div>
+            </div>
+
+            <!-- HORARIO -->
+            <div class="contact-item">
+              <div class="contact-ico" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="60"
+                  height="60"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+
+              <div class="contact-subtitle">Lunes a Sabado</div>
+
+              <div class="contact-txt">
+                <div class="contact-line">11:00 a.m a 7:00 p.m</div>
+                <div class="contact-line">11:00 a.m a 8:00 p.m</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REDES -->
+          <div class="contact-socials" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/rphone61/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/528999828383" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.facebook.com/share/17wcSanQ7k/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+
+          <div class="contact-extra-card reveal d-140" aria-label="Información adicional de contacto">
+            <p class="contact-extra-lead">
+              Ponemos a tu disposición nuestras redes sociales, líneas de contacto y correo electrónico. Asimismo, puedes visitarnos en cualquiera de nuestras sucursales.
+            </p>
+
+            <div class="contact-extra-copy">
+              <p>
+                <strong>Información adicional de contacto</strong>
+              </p>
+              <p>
+                <strong>Sucursal Puerta del Sol:</strong> Rio Concepcion 218 Sobre Blvd. Puerta del Sol, Reynosa, Tamaulipas.<br>
+                Lunes a viernes de 11:00 a.m. a 8:00 p.m. • Sábado de 11:00 a.m. a 6:00 p.m.
+              </p>
+              <p>
+                <strong>Sucursal Matriz Aztlán:</strong> Elías Piña 598-5C, La Cañada, Reynosa, Tamaulipas.<br>
+                Lunes a viernes de 10:00 a.m. a 7:00 p.m. • Sábado de 10:00 a.m. a 6:00 p.m.
+              </p>
+              <p>
+                <strong>Contacto NeoRex:</strong>
+                <a href="mailto:neorexapp@gmail.com">neorexapp@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+                 <!-- =====================
+         CTA NeoRex
+         ===================== -->
+    <section class="cta-neorex" aria-label="NeoRex">
+      <div class="container">
+        <div class="cta-neorex-grid">
+          <!-- Logo -->
+          <div class="cta-neorex-brand">
+            <img
+              class="cta-neorex-logo"
+              src="./assets/presets/neorex-logo.jpg"
+              alt="NeoRex logo"
+            >
+          </div>
+
+          <!-- Texto -->
+          <div class="cta-neorex-copy">
+            <h2 class="cta-neorex-title">
+              Problemas<br>de Organización?
+            </h2>
+
+            <p class="cta-neorex-text">
+              Prueba NeoRex, la solución para tu negocio.
+            </p>
+
+            <!-- Botón + Ghost -->
+            <div class="cta-neorex-actions">
+              <button class="btn2" type="button">
+                <span class="spn2">Próximamente</span>
+              </button>
+
+              <div id="ghost">
+                <div id="red">
+                  <div id="pupil"></div>
+                  <div id="pupil1"></div>
+                  <div id="eye"></div>
+                  <div id="eye1"></div>
+                  <div id="top0"></div>
+                  <div id="top1"></div>
+                  <div id="top2"></div>
+                  <div id="top3"></div>
+                  <div id="top4"></div>
+                  <div id="st0"></div>
+                  <div id="st1"></div>
+                  <div id="st2"></div>
+                  <div id="st3"></div>
+                  <div id="st4"></div>
+                  <div id="st5"></div>
+                  <div id="an1"></div>
+                  <div id="an2"></div>
+                  <div id="an3"></div>
+                  <div id="an4"></div>
+                  <div id="an5"></div>
+                  <div id="an6"></div>
+                  <div id="an7"></div>
+                  <div id="an8"></div>
+                  <div id="an9"></div>
+                  <div id="an10"></div>
+                  <div id="an11"></div>
+                  <div id="an12"></div>
+                  <div id="an13"></div>
+                  <div id="an14"></div>
+                  <div id="an15"></div>
+                  <div id="an16"></div>
+                  <div id="an17"></div>
+                  <div id="an18"></div>
+                </div>
+                <div id="shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         FOOTER
+         ===================== -->
+    <footer class="footer-rich">
+      <div class="footer-body">
+        <div class="container">
+          <div class="footer-grid">
+
+            <!-- Col 1: Marca -->
+            <div class="footer-col footer-col--brand">
+              <img src="./assets/rphone-logo.png" alt="RPHONE logo" class="footer-logo">
+              <p class="footer-desc">Reparación profesional de dispositivos electrónicos en Reynosa, Tamaulipas. Más de 25,000 equipos reparados desde 2018.</p>
+              <div class="footer-socials">
+                <a href="https://www.instagram.com/rphone61/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-btn">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/17wcSanQ7k/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-btn">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@rphone.oficial" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-btn">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/528999828383" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social-btn">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Col 2: Servicios -->
+            <div class="footer-col">
+              <h3 class="footer-heading">Servicios</h3>
+              <ul class="footer-links">
+                <li><a href="./servicios.html#svc-pantalla">Cambio de pantalla</a></li>
+                <li><a href="./servicios.html#svc-bateria">Cambio de batería</a></li>
+                <li><a href="./servicios.html#svc-centro-carga">Centro de carga</a></li>
+                <li><a href="./servicios.html">Liberación MEP</a></li>
+                <li><a href="./servicios.html">Diagnóstico</a></li>
+                <li><a href="./servicios.html">Microsoldadura</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Sucursales -->
+            <div class="footer-col">
+              <h3 class="footer-heading">Sucursales</h3>
+              <ul class="footer-links">
+                <li class="footer-branch">
+                  <span class="footer-branch-name">Suc. Puerta del Sol</span>
+                  <span class="footer-branch-addr">Rio Concepcion 218, Blvd. Puerta del Sol</span>
+                  <a href="https://maps.app.goo.gl/YtkrNhGLRqy1RgKeA" target="_blank" rel="noopener">Ver en Maps 📍</a>
+                  <a href="https://wa.me/528991198900" target="_blank" rel="noopener">WhatsApp </a>
+                </li>
+                <li class="footer-branch" style="margin-top:14px">
+                  <span class="footer-branch-name">Suc. Matriz Aztlán</span>
+                  <span class="footer-branch-addr">Elías Piña 598-5C, La Cañada</span>
+                  <a href="https://maps.app.goo.gl/ztcjKQDMuoxxdpHx6" target="_blank" rel="noopener">Ver en Maps 📍</a>
+                  <a href="https://wa.me/528999828383" target="_blank" rel="noopener">WhatsApp </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Contacto -->
+            <div class="footer-col">
+              <h3 class="footer-heading">Contacto</h3>
+              <ul class="footer-links">
+                <li><a href="https://wa.me/528991198900" target="_blank" rel="noopener">📞 (899) 119 8900</a></li>
+                <li><a href="https://wa.me/528999828383" target="_blank" rel="noopener">📞 (899) 982 8383</a></li>
+                <li><a href="mailto:neorexapp@gmail.com">✉ neorexapp@gmail.com</a></li>
+                <li style="margin-top:10px; color:rgba(243,247,255,.60); font-size:13px;">Lun – Vie: 10:00 – 8:00 pm</li>
+                <li style="color:rgba(243,247,255,.60); font-size:13px;">Sábado: 10:00 – 6:00 pm</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="year"></span> RPHONE • Reynosa, Tamaulipas</span>
+          <span>Hecho con ❤️ para nuestros clientes</span>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Volver arriba">&#8679;</a>
+</main>
+
+  <!-- =====================
+       SCRIPTS
+       ===================== -->
+  <script>
+    // Back to top
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 300);
+    });
+    btt.addEventListener('click', e => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // Hamburger menu
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // Cerrar al hacer click en un link
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+  <script defer src="./js/index.js"></script>
+  <script type="module" src="./js/social-firestore.js"></script>
+</body>
+</html>

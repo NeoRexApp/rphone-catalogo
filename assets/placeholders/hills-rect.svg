@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfeaff"/>
+      <stop offset="1" stop-color="#e9f6ff"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fd35e"/>
+      <stop offset="1" stop-color="#2fbf6c"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8de07b"/>
+      <stop offset="1" stop-color="#55c07a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#sky)"/>
+
+  <g opacity=".96">
+    <path d="M0 400 C220 300 440 300 660 400 C880 500 1030 500 1200 380 L1200 600 L0 600 Z" fill="url(#hill2)"/>
+    <path d="M0 470 C220 390 470 390 720 470 C970 550 1120 550 1200 470 L1200 600 L0 600 Z" fill="url(#hill1)"/>
+  </g>
+
+  <g fill="#ffffff" opacity=".95">
+    <path d="M210 150c0-18 15-33 33-33 13 0 25 8 30 19 4-2 8-3 12-3 14 0 25 11 25 25 0 14-11 25-25 25H240c-17 0-30-14-30-33Z"/>
+    <path d="M820 120c0-16 13-29 29-29 12 0 22 7 26 17 3-1 7-2 10-2 12 0 22 10 22 22 0 12-10 22-22 22h-55c-16 0-30-13-30-30Z"/>
+  </g>
+
+  <rect x="14" y="14" width="1172" height="572" rx="28" ry="28" fill="none" stroke="#0b0f22" stroke-opacity=".12" stroke-width="28"/>
+</svg>

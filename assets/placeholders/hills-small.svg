@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfeaff"/>
+      <stop offset="1" stop-color="#e9f6ff"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fd35e"/>
+      <stop offset="1" stop-color="#2fbf6c"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8de07b"/>
+      <stop offset="1" stop-color="#55c07a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="420" fill="url(#sky)"/>
+  <g opacity=".96">
+    <path d="M0 280 C160 210 320 210 480 280 C640 350 760 350 900 260 L900 420 L0 420 Z" fill="url(#hill2)"/>
+    <path d="M0 330 C160 270 330 270 500 330 C670 390 800 390 900 320 L900 420 L0 420 Z" fill="url(#hill1)"/>
+  </g>
+
+  <g fill="#ffffff" opacity=".95">
+    <path d="M140 110c0-14 12-26 26-26 10 0 20 6 24 15 3-1 6-2 9-2 11 0 20 9 20 20 0 11-9 20-20 20h-44c-14 0-25-12-25-27Z"/>
+    <path d="M640 90c0-12 10-22 22-22 9 0 17 5 20 13 3-1 5-1 8-1 9 0 17 8 17 17 0 9-8 17-17 17h-41c-12 0-22-10-22-24Z"/>
+  </g>
+
+  <rect x="10" y="10" width="880" height="400" rx="20" ry="20" fill="none" stroke="#0b0f22" stroke-opacity=".12" stroke-width="20"/>
+</svg>

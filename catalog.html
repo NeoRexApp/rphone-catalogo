@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPHONE | Catálogo</title>
+
+  <link rel="stylesheet" href="css/catalogo.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body class="js">
+
+  <header class="navbar nav-v2">
+    <div class="container inner">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <img src="assets/rphone-logo.png" alt="RPHONE" class="logo">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Principal">
+        <a href="index.html" class="pill">Inicio</a>
+        <a href="catalog.html" class="pill active">Catalogo</a>
+        <a href="servicios.html" class="pill">Servicios</a>
+        <a href="index.html#contact" class="pill">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="catalog-section">
+    <div class="container catalog-page-wrap">
+      <section class="catalog-shell reveal is-in" aria-label="Catálogo de productos y servicios">
+
+        <div class="catalog-toolbar">
+          <div class="catalog-filter-rail" aria-label="Categorías principales">
+            <div
+              id="catalogFilterScroll"
+              class="catalog-filter-scroll"
+              role="tablist"
+              aria-label="Filtro del catálogo"
+            ></div>
+          </div>
+
+          <div class="catalog-search-wrap">
+            <div class="catalog-search">
+              <input
+                type="text"
+                id="buscador"
+                placeholder=""
+                autocomplete="off"
+                aria-label="Buscar en el catálogo"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div
+              id="catalogSearchDropdown"
+              class="catalog-search-dropdown"
+              hidden
+              aria-label="Sugerencias de búsqueda"
+            ></div>
+          </div>
+        </div>
+
+        <div class="catalog-status-bar">
+          <p id="catalogMeta" class="catalog-meta">Cargando catálogo...</p>
+        </div>
+
+        <section class="catalog-grid" id="productosGrid" aria-live="polite"></section>
+
+        <div class="catalog-footer-actions">
+          <button id="catalogLoadMore" class="catalog-load-more" type="button" hidden>
+            Mostrar más
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+  <script src="js/catalog-config.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

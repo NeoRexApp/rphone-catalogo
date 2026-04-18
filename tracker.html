@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>RPHONE • Rastrear</title>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container inner">
+      <a class="brand" href="./index.html" aria-label="RPHONE">
+        <img class="logo" src="./assets/rphone-logo.svg" alt="RPHONE logo">
+        <span class="brand-name brand-name-hidden">RPHONE</span>
+      </a>
+
+      <nav class="nav-links">
+        <a class="pill" data-nav href="./index.html">Inicio</a>
+        <a class="pill" data-nav href="./catalog.html">Catálogo</a>
+        <a class="pill active" data-nav href="./tracker.html">Rastrear</a>
+        <a class="pill primary" id="waHelp" href="#" target="_blank" rel="noopener">Ayuda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section class="card">
+      <div class="section-title">
+        <h2 class="section-heading-compact">Rastrear reparación</h2>
+        <span class="badge">Por código</span>
+      </div>
+      <p class="p">Escribe tu código (ejemplo: <b>RP-482193</b>) para ver el estatus.</p>
+
+      <div class="row row-gap-top-12">
+        <input class="input" id="code" placeholder="RP-123456"/>
+        <button class="pill primary" id="btn" type="button">Consultar</button>
+      </div>
+
+      <div id="result" class="result-gap-top-14"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="flex-between-wrap">
+        <span>Si no tienes el código, pídenos ayuda.</span>
+        <a class="pill" href="./index.html">Volver</a>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="./js/tracker.js"></script>
+</body>
+</html>
