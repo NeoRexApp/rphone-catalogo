@@ -59,7 +59,10 @@ def catalogo_json():
 
 @app.route("/uploads/<path:filename>")
 def serve_uploads(filename):
-    return send_from_directory(UPLOADS_DIR, filename)
+    numero = Path(filename).stem
+    for f in UPLOADS_DIR.rglob(f"{numero}*"):
+        return send_from_directory(f.parent, f.name)
+    return "", 404
 
 @app.route("/")
 @app.route("/<path:filename>")
