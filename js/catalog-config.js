@@ -1,5 +1,5 @@
-window.RPHONE_CATALOG_CONFIG = {
-  mode: "googleSheets",
+﻿window.RPHONE_CATALOG_CONFIG = {
+  mode: "local",
   googleSheetId: "1P8niJqYLyX0Rd_zxsdWJfpfoT2UgEvQf",
   googleSheetSheetName: "CATALOGO_WEB",
   localJsonPath: "data/catalogo-local.json",
